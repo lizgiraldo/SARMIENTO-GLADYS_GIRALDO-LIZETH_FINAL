@@ -8,10 +8,10 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.backend.final</groupId>
-	<artifactId>clinica-dental-lg</artifactId>
+	<groupId>com.backend</groupId>
+	<artifactId>clinicaDental</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>clinica-dental-lg</name>
+	<name>clinicaDental</name>
 	<description>Proyecto Clinica Dental - JG </description>
 	<properties>
 		<java.version>17</java.version>

@@ -5,7 +5,7 @@ import com.backend.clinicaDental.repository.IDao;
 import com.backend.clinicaDental.service.IOdontologoService;
 
 import java.util.List;
-//Comentario
+
 public class OdontologoService implements IOdontologoService {
 
     private IDao<Odontologo> odontologoIDao;
@@ -13,7 +13,7 @@ public class OdontologoService implements IOdontologoService {
     public  OdontologoService(IDao<Odontologo> odontologoIDao){
         this.odontologoIDao = odontologoIDao;
     }
-//Comentario II
+
     @Override
     public Odontologo registrarOdontologo(Odontologo odontologo){
         return odontologoIDao.registrar(odontologo);

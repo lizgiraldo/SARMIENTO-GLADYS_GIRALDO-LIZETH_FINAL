@@ -51,9 +51,34 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+		<!--nuevo-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
 
+		<!--nuevo-->
+		<!--Jackson-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.4.4</version>
+		</dependency>
+
+		<!--Bean Validations-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
     </dependencies>
+
+
+
 
 	<build>
 		<plugins>

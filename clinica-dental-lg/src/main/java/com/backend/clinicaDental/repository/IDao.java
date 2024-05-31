@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface IDao<T> {
     T registrar(T t);
-
-    Domicilio buscarPorId(Long id);
-
+    T buscarPorId(Long id);
     List<T> listarTodos();
 }

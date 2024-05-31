@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,7 +80,7 @@ public class PacienteDaoH2 implements IDao<Paciente> {
     }
 
     @Override
-    public Paciente buscarPorId(Long id) {
+    public Paciente buscarPorId(Long id){
         return null;
     }
 

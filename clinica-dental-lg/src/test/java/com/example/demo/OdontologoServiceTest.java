@@ -1,6 +1,5 @@
-package com.backend.clinicaDental.test;
+package com.example.demo;
 
-import com.backend.clinicaDental.repository.impl.OdontologoDaoEnMemoria;
 import com.backend.clinicaDental.repository.impl.OdontologoDaoH2;
 import com.backend.clinicaDental.service.impl.OdontologoService;
 import org.testng.annotations.Test;

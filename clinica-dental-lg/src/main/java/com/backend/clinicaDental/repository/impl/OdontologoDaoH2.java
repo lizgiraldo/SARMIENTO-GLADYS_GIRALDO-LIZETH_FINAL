@@ -3,14 +3,16 @@ package com.backend.clinicaDental.repository.impl;
 import com.backend.clinicaDental.dbconnection.H2Connection;
 import com.backend.clinicaDental.entity.Odontologo;
 import com.backend.clinicaDental.repository.IDao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 public class OdontologoDaoH2 implements IDao<Odontologo> {
-    private final Logger LOGGER = Logger.getLogger(Odontologo.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(OdontologoDaoH2.class);
 
    @Override
    public Odontologo registrar(Odontologo odontologo){
@@ -62,6 +64,11 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
 
        return odontologoRegistrado;
      }
+
+    @Override
+    public Odontologo buscarPorId(Long id) {
+        return null;
+    }
 
 
     @Override

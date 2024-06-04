@@ -78,6 +78,4 @@ public class PacienteEntradaDto {
         this.domicilioEntradaDto = domicilioEntradaDto;
     }
 
-
-
 }

@@ -3,6 +3,7 @@ package com.backend.clinicaDental.service.impl;
 import com.backend.clinicaDental.dto.entrada.PacienteEntradaDto;
 import com.backend.clinicaDental.dto.salida.PacienteSalidaDto;
 import com.backend.clinicaDental.entity.Paciente;
+import com.backend.clinicaDental.exceptions.ResourceNotFoundException;
 import com.backend.clinicaDental.repository.PacienteRepository;
 import com.backend.clinicaDental.service.IPacienteService;
 import com.backend.clinicaDental.utils.JsonPrinter;
@@ -64,11 +65,14 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void eliminarPaciente(Long id){
+    public void eliminarPaciente(Long id) throws ResourceNotFoundException {
         if(buscarPacientesPorId(id) != null){
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
+        } else {
+            throw new ResourceNotFoundException("No Existe Regostro del Paciente con id " + id);
         }
+
     }
 
     @Override

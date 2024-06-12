@@ -1,8 +1,8 @@
 package com.backend.clinicaDental.dto.entrada;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.*;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 
 
 import java.time.LocalDate;

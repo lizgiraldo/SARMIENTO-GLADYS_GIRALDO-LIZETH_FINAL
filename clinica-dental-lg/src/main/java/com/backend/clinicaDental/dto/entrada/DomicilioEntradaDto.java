@@ -1,8 +1,8 @@
 package com.backend.clinicaDental.dto.entrada;
 
-import jakarta.validation.constraints.Digits;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 public class DomicilioEntradaDto {
     @NotBlank(message = "Debe proveerse el nombre de la calle del domicilio")

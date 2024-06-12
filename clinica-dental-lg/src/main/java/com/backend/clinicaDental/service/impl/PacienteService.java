@@ -29,11 +29,11 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public PacienteSalidaDto registrarPaciente(PacienteEntradaDto pacienteEntradaDto){
-        LOGGER.info("PacienteEntradaDto: " + pacienteEntradaDto);
+        LOGGER.info("PacienteEntradaDto: " + JsonPrinter.toString(pacienteEntradaDto));
         Paciente paciente = modelMapper.map(pacienteEntradaDto, Paciente.class);
-        LOGGER.info("PacienteEntidad: " + paciente);
+        LOGGER.info("PacienteEntidad: " + JsonPrinter.toString(paciente));
         PacienteSalidaDto pacienteSalidaDto = modelMapper.map(pacienteRepository.save(paciente), PacienteSalidaDto.class);
-        LOGGER.info("PacienteSalidaDto: " + pacienteSalidaDto);
+        LOGGER.info("PacienteSalidaDto: " + JsonPrinter.toString(pacienteSalidaDto));
         return pacienteSalidaDto;
     }
 
@@ -43,7 +43,7 @@ public class PacienteService implements IPacienteService {
                 .stream()
                 .map(paciente -> modelMapper.map(paciente, PacienteSalidaDto.class))
                 .toList();
-        LOGGER.info("Listado de todos los pacientes: {} ", pacientes);
+        LOGGER.info("Listado de todos los pacientes: {} ", JsonPrinter.toString(pacientes));
         return pacientes;
     }
 

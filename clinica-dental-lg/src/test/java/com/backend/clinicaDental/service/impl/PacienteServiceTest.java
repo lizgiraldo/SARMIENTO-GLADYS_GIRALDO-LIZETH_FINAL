@@ -1,10 +1,11 @@
 package com.backend.clinicaDental.service.impl;
-
-
 import com.backend.clinicaDental.dto.entrada.DomicilioEntradaDto;
 import com.backend.clinicaDental.dto.entrada.PacienteEntradaDto;
 import com.backend.clinicaDental.dto.salida.PacienteSalidaDto;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
@@ -17,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @SpringBootTest
 @TestPropertySource(locations = "classpatch:application-test.properties")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class PacienteServiceTest {
 
     @Autowired

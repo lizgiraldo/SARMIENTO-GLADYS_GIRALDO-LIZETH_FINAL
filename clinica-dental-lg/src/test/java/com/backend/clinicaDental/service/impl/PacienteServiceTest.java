@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @SpringBootTest
 @TestPropertySource(locations = "classpatch:application-test.properties")
-class PacienteServiceTest {
+public class PacienteServiceTest {
 
     @Autowired
     private PacienteService pacienteService;

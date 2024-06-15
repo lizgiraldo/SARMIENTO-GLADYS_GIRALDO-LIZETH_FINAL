@@ -12,9 +12,9 @@ public class Odontologo {
     private Long id;
     @Column(length = 10)
     private Long numeroDeMatricula;
-    @Column(length = 30)
+    @Column(length = 50)
     private String nombre;
-    @Column(length = 20)
+    @Column(length = 50)
     private String apellido;
 
     public Odontologo(Long id, Long numeroDeMatricula, String nombre, String apellido) {

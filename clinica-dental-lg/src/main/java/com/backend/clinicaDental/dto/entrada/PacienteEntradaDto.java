@@ -18,7 +18,7 @@ public class PacienteEntradaDto {
     private int dni;
 
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
-    @NotNull(message = "Debe especificarse la fecha de ingreso del paciente")
+    @NotNull(message = "Debe especificarse la fecha de ingreso del paciente yyyy-MM-dd")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate fechaIngreso;
 

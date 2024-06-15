@@ -48,11 +48,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public PacienteSalidaDto buscarPacientePorId(Long id) {
-        return null;
-    }
-
-    public PacienteSalidaDto buscarPacientesPorId(Long id){
+    public PacienteSalidaDto buscarPacientePorId(Long id){
         Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteEncontrado = null;
 
@@ -66,7 +62,7 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public void eliminarPaciente(Long id) throws ResourceNotFoundException {
-        if(buscarPacientesPorId(id) != null){
+        if(buscarPacientePorId(id) != null){
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
         } else {
@@ -75,10 +71,6 @@ public class PacienteService implements IPacienteService {
 
     }
 
-    @Override
-    public PacienteSalidaDto actulizarPaciente(PacienteEntradaDto pacienteEntradaDto, Long id) {
-        return null;
-    }
 
     @Override
     public PacienteSalidaDto actualizarPaciente(PacienteEntradaDto pacienteEntradaDto, Long id) {

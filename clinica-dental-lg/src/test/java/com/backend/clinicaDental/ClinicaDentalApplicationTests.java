@@ -3,8 +3,8 @@ package com.backend.clinicaDental;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
-public class ClinicaDentalApplicationTests {
+@SpringBootTest
+class ClinicaDentalApplicationTests {
 
     @Test
     void contextLoads() {

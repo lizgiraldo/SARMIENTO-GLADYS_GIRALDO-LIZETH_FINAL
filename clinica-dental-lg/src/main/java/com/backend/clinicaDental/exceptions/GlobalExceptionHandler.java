@@ -20,6 +20,7 @@ public class GlobalExceptionHandler {
         mensaje.put("Mensaje", "Recurso NO Encontrado: " + resourceNotFoundException.getMessage());
         return mensaje;
     }
+    //OJO Requerimiento manejo de BadRequestException
 
     @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -32,4 +33,5 @@ public class GlobalExceptionHandler {
         });
         return mensaje;
     }
+    //HttpMessageNotReadableException
 }

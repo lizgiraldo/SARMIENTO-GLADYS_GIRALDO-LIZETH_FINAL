@@ -13,13 +13,13 @@ import org.springframework.test.context.TestPropertySource;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 @SpringBootTest
-@TestPropertySource(locations = "classpatch:application-test.properties")
+@TestPropertySource(locations = "classpath:application-test.properties")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class PacienteServiceTest {
+class PacienteServiceTest {
 
     @Autowired
     private PacienteService pacienteService;
@@ -27,9 +27,10 @@ public class PacienteServiceTest {
     @Test
     @Order(1)
     void deberiaRegistrarseUnPacienteDeNombreJuan_yRetornarSuId(){
-        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Juan", "Perez", 123456, LocalDate.of(2024, 6, 22), new DomicilioEntradaDto("Calle", 123, "Localidad","Provincia"));
 
-        PacienteSalidaDto pacienteSalidaDto  = pacienteService.registrarPaciente(pacienteEntradaDto);
+        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Juan", "Perez", 123456, LocalDate.of(2024, 6, 22), new DomicilioEntradaDto("Calle", 123, "Localidad", "Provincia"));
+
+        PacienteSalidaDto pacienteSalidaDto = pacienteService.registrarPaciente(pacienteEntradaDto);
 
         //assert
         assertNotNull(pacienteSalidaDto);
@@ -37,15 +38,17 @@ public class PacienteServiceTest {
         assertEquals("Juan", pacienteSalidaDto.getNombre());
     }
 
+
     @Test
     @Order(2)
-    void deberiaEliminarElPacienteConId(){
+    void deberiaEliminarseElPacienteConId1(){
+
         assertDoesNotThrow(() -> pacienteService.eliminarPaciente(1L));
     }
 
     @Test
     @Order(3)
-    void deberiaDevolverUnaListaVaciaPacientes(){
+    void deberiaDevolverUnaListaVaciaDePacientes(){
         List<PacienteSalidaDto> listadoDePacientes = pacienteService.listarPacientes();
         assertTrue(listadoDePacientes.isEmpty());
     }

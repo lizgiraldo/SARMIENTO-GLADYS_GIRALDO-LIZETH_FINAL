@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("pacientes")
-
+@CrossOrigin
 public class PacienteController {
 
     private IPacienteService pacienteService;
@@ -43,7 +43,7 @@ public class PacienteController {
     //put
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@RequestBody @Valid PacienteEntradaDto pacienteEntradaDto, @PathVariable Long id){
-       return new ResponseEntity<>(pacienteService.actulizarPaciente(pacienteEntradaDto, id), HttpStatus.OK);
+       return new ResponseEntity<>(pacienteService.actualizarPaciente(pacienteEntradaDto, id), HttpStatus.OK);
     }
 
     //delete

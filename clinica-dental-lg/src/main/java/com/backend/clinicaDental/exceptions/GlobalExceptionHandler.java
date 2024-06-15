@@ -20,11 +20,18 @@ public class GlobalExceptionHandler {
         mensaje.put("Mensaje", "Recurso NO Encontrado: " + resourceNotFoundException.getMessage());
         return mensaje;
     }
-    //OJO Requerimiento manejo de BadRequestException
+
+    @ExceptionHandler({BadRequestException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Map<String, String> manejarBadRequestException(BadRequestException badRequestException) {
+        Map<String, String> mensaje = new HashMap<>();
+        mensaje.put("mensaje", "Solicitud incorrecta: " + badRequestException.getMessage());
+        return mensaje;
+    }
 
     @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Map<String, String> manejarMethodArgumentNotValidException(MethodArgumentNotValidException methodArgumentNotValidException){
+    public Map<String, String> manejarMethodArgumentNotValidException(MethodArgumentNotValidException methodArgumentNotValidException) {
         Map<String, String> mensaje = new HashMap<>();
         methodArgumentNotValidException.getBindingResult().getAllErrors().forEach(e -> {
             String nombreCampo = ((FieldError) e).getField();
@@ -33,5 +40,4 @@ public class GlobalExceptionHandler {
         });
         return mensaje;
     }
-    //HttpMessageNotReadableException
 }

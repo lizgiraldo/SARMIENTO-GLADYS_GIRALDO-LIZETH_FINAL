@@ -19,7 +19,9 @@ public class TurnoEntradaDto {
     private Long odontologoId;
     private Long pacienteId;
 
+
     public TurnoEntradaDto(LocalDateTime fechaYHora, Long odontologoId, Long pacienteId) {
+
         this.fechaYHora = fechaYHora;
         this.odontologoId = odontologoId;
         this.pacienteId = pacienteId;

@@ -76,17 +76,17 @@ public class PacienteService implements IPacienteService {
     public PacienteSalidaDto actualizarPaciente(PacienteEntradaDto pacienteEntradaDto, Long id) {
 
         Paciente pacienteRecibido = modelMapper.map(pacienteEntradaDto, Paciente.class);
-        Paciente pacienteAActualizar = pacienteRepository.findById(id).orElse(null);
+        Paciente pacienteActualizar = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteSalidaDto = null;
 
-        if(pacienteAActualizar != null){
+        if(pacienteActualizar != null){
 
-            pacienteRecibido.setId(pacienteAActualizar.getId());
-            pacienteRecibido.getDomicilio().setId(pacienteAActualizar.getDomicilio().getId());
-            pacienteAActualizar = pacienteRecibido;
+            pacienteRecibido.setId(pacienteActualizar.getId());
+            pacienteRecibido.getDomicilio().setId(pacienteActualizar.getDomicilio().getId());
+            pacienteActualizar = pacienteRecibido;
 
-            pacienteRepository.save(pacienteAActualizar);
-            pacienteSalidaDto = modelMapper.map(pacienteAActualizar, PacienteSalidaDto.class);
+            pacienteRepository.save(pacienteActualizar);
+            pacienteSalidaDto = modelMapper.map(pacienteActualizar, PacienteSalidaDto.class);
             LOGGER.warn("Paciente actualizado: {}", JsonPrinter.toString(pacienteSalidaDto));
 
         } else {

@@ -13,6 +13,6 @@ public interface IOdontologoService {
     OdontologoSalidaDto buscarOdontologo(Long id) throws ResourceNotFoundException;
     OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologoEntradaDto);
     List<OdontologoSalidaDto> listarOdontologos();
-    OdontologoSalidaDto actulizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException;
+    OdontologoSalidaDto actualizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException;
     void eliminarOdontologo(Long id) throws ResourceNotFoundException;
 }

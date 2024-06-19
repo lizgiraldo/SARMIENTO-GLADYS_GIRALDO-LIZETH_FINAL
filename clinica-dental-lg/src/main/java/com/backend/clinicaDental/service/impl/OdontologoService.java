@@ -55,7 +55,7 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public OdontologoSalidaDto actulizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException{
+    public OdontologoSalidaDto actualizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException{
         Odontologo odontologoExistente = odontologoRepository.findById(id).orElse(null);
         if(odontologoExistente == null){
             throw new ResourceNotFoundException("Odontologo no encontrado con id" + id);

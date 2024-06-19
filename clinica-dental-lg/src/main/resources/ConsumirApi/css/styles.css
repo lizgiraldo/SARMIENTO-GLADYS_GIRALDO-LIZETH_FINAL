@@ -1,0 +1,159 @@
+:root {
+    --gris: #535353;
+    --gris-2: #222222;
+    --gris-2-trasluz: #22222285;
+    --gris-oscuro: hsl(0, 0%, 11%);
+    --verde: #1e49d5;
+    --letras: #C5C5C5;
+
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafo: 'Open Sans', sans-serif;
+
+    --primario: #0037afea;
+    --secundario: #023b85bd;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --fondo: #0755ffb4;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--gris-oscuro);
+    color: var(--letras);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    background: linear-gradient(var(--gris), var(--gris-2));
+    padding: 3rem;
+    border-left: .5rem solid var(--verde);
+}
+
+/**Header**/
+
+.header {
+    background-image: url(../img/banner3.jpeg);
+    height: 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+h1, h2{
+    color:indigo;
+}
+
+.parrafo{
+    color: #3b3636;
+}
+.barra {
+    padding-top: 1rem;
+}
+
+
+#logo {
+    height: 3em;
+}
+
+
+.contenido-principal {
+        gap: 2rem;
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.entrada__imagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+
+}
+
+
+.listado {
+    border-left: .5rem solid var(--verde);
+    padding: 3rem;
+}
+
+.listado h3 {
+    margin-bottom: 1rem;
+}
+
+.covers {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 4rem;
+    list-style: none;
+    padding-left: 80px;
+}
+.covers button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0.2rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: auto;
+}
+
+li {
+    width: 25%;
+    border-radius: 3px;
+    padding: 1.5rem;
+    background-color: var(--secundario);
+}
+
+li:hover {
+    background-color: var(--gris-2-trasluz);
+}
+
+li img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.covers li i {
+    position: relative;
+    left: 90%;
+    cursor: pointer;
+}
+
+.covers li i:hover {
+    opacity: 0.7;
+}
+
+.covers li i:active {
+    opacity: 1;
+}
+
+
+footer{
+    padding: 1rem;
+    border-top: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: var(--blanco);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}

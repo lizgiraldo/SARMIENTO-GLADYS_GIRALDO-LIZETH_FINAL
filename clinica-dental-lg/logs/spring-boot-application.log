@@ -1,0 +1,66 @@
+2024-06-18 22:50:28 [main] INFO  c.b.c.ClinicaDentalLgApplication - Starting ClinicaDentalLgApplication using Java 17.0.11 on MacBook-Air-de-gsarmiento.local with PID 1550 (/Users/gsarmiento/Documents/Cursos/GlobantMercadoLibre/Backend/SARMIENTO-GLADYS_GIRALDO-LIZETH_FINAL/clinica-dental-lg/target/classes started by gsarmiento in /Users/gsarmiento/Documents/Cursos/GlobantMercadoLibre/Backend/SARMIENTO-GLADYS_GIRALDO-LIZETH_FINAL/clinica-dental-lg)
+2024-06-18 22:50:28 [main] INFO  c.b.c.ClinicaDentalLgApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 22:50:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 22:50:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 3 JPA repository interfaces.
+2024-06-18 22:50:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-06-18 22:50:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 22:50:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 22:50:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-06-18 22:50:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 22:50:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4869 ms
+2024-06-18 22:50:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 22:50:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 22:50:34 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/clinicaDental'
+2024-06-18 22:50:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 22:50:38 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 22:50:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 22:50:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-18 22:50:39 [main] INFO  c.b.c.ClinicaDentalLgApplication - Started ClinicaDentalLgApplication in 13.036 seconds (JVM running for 14.456)
+2024-06-18 22:53:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 22:53:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 22:53:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 22:53:35 [main] INFO  c.b.c.ClinicaDentalLgApplication - Starting ClinicaDentalLgApplication using Java 17.0.11 on MacBook-Air-de-gsarmiento.local with PID 1568 (/Users/gsarmiento/Documents/Cursos/GlobantMercadoLibre/Backend/SARMIENTO-GLADYS_GIRALDO-LIZETH_FINAL/clinica-dental-lg/target/classes started by gsarmiento in /Users/gsarmiento/Documents/Cursos/GlobantMercadoLibre/Backend/SARMIENTO-GLADYS_GIRALDO-LIZETH_FINAL/clinica-dental-lg)
+2024-06-18 22:53:35 [main] INFO  c.b.c.ClinicaDentalLgApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 22:53:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 22:53:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 266 ms. Found 3 JPA repository interfaces.
+2024-06-18 22:53:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-06-18 22:53:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 22:53:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 22:53:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-06-18 22:53:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 22:53:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5412 ms
+2024-06-18 22:53:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 22:53:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 22:53:41 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/clinicaDental'
+2024-06-18 22:53:45 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 22:53:48 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 22:53:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 22:53:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-18 22:53:50 [main] INFO  c.b.c.ClinicaDentalLgApplication - Started ClinicaDentalLgApplication in 17.675 seconds (JVM running for 19.198)
+2024-06-18 22:54:04 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-18 22:54:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-18 22:54:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-06-18 22:54:04 [http-nio-8080-exec-1] INFO  c.b.c.service.impl.PacienteService - PacienteEntradaDto: {  "nombre": "Ana Maria",  "apellido": "Rodriguez",  "dni": 9999,  "fechaIngreso": "2024-06-18",  "domicilioEntradaDto": {    "calle": "Calle 68",    "numero": 25,    "localidad": "Fontibon",    "provincia": "Bogota"  }}
+2024-06-18 22:54:04 [http-nio-8080-exec-1] INFO  c.b.c.service.impl.PacienteService - PacienteEntidad: {  "nombre": "Ana Maria",  "apellido": "Rodriguez",  "dni": 9999,  "fechaIngreso": "2024-06-18",  "domicilio": {    "calle": "Calle 68",    "numero": 25,    "localidad": "Fontibon",    "provincia": "Bogota"  }}
+2024-06-18 22:54:05 [http-nio-8080-exec-1] INFO  c.b.c.service.impl.PacienteService - PacienteSalidaDto: {  "id": 1,  "nombre": "Ana Maria",  "apellido": "Rodriguez",  "dni": 9999,  "fechaIngreso": "2024-06-18",  "domicilioSalidaDto": {    "id": 1,    "calle": "Calle 68",    "numero": 25,    "localidad": "Fontibon",    "provincia": "Bogota"  }}
+2024-06-18 22:54:10 [http-nio-8080-exec-3] INFO  c.b.c.service.impl.OdontologoService - Estos son los odontologos encontrados[]
+2024-06-18 22:54:19 [http-nio-8080-exec-4] INFO  c.b.c.service.impl.PacienteService - Listado de todos los pacientes: [  {    "id": 1,    "nombre": "Ana Maria",    "apellido": "Rodriguez",    "dni": 9999,    "fechaIngreso": "2024-06-18",    "domicilioSalidaDto": {      "id": 1,      "calle": "Calle 68",      "numero": 25,      "localidad": "Fontibon",      "provincia": "Bogota"    }  }] 
+2024-06-18 22:57:47 [main] INFO  c.b.c.s.impl.PacienteServiceTest - Starting PacienteServiceTest using Java 17.0.11 on MacBook-Air-de-gsarmiento.local with PID 1581 (started by gsarmiento in /Users/gsarmiento/Documents/Cursos/GlobantMercadoLibre/Backend/SARMIENTO-GLADYS_GIRALDO-LIZETH_FINAL/clinica-dental-lg)
+2024-06-18 22:57:47 [main] INFO  c.b.c.s.impl.PacienteServiceTest - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 22:57:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 22:57:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 215 ms. Found 3 JPA repository interfaces.
+2024-06-18 22:57:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 22:57:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 22:57:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 22:58:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 22:58:01 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/clinicaDentalTest'
+2024-06-18 22:58:02 [main] INFO  c.b.c.s.impl.PacienteServiceTest - Started PacienteServiceTest in 16.731 seconds (JVM running for 22.496)
+2024-06-18 22:58:03 [main] INFO  c.b.c.service.impl.PacienteService - PacienteEntradaDto: {  "nombre": "Juan",  "apellido": "Perez",  "dni": 123456,  "fechaIngreso": "2024-06-22",  "domicilioEntradaDto": {    "calle": "Calle",    "numero": 123,    "localidad": "Localidad",    "provincia": "Provincia"  }}
+2024-06-18 22:58:03 [main] INFO  c.b.c.service.impl.PacienteService - PacienteEntidad: {  "nombre": "Juan",  "apellido": "Perez",  "dni": 123456,  "fechaIngreso": "2024-06-22",  "domicilio": {    "calle": "Calle",    "numero": 123,    "localidad": "Localidad",    "provincia": "Provincia"  }}
+2024-06-18 22:58:03 [main] INFO  c.b.c.service.impl.PacienteService - PacienteSalidaDto: {  "id": 1,  "nombre": "Juan",  "apellido": "Perez",  "dni": 123456,  "fechaIngreso": "2024-06-22",  "domicilioSalidaDto": {    "id": 1,    "calle": "Calle",    "numero": 123,    "localidad": "Localidad",    "provincia": "Provincia"  }}
+2024-06-18 22:58:03 [main] INFO  c.b.c.service.impl.PacienteService - PacienteEncontrado: {  "id": 1,  "nombre": "Juan",  "apellido": "Perez",  "dni": 123456,  "fechaIngreso": "2024-06-22",  "domicilioSalidaDto": {    "id": 1,    "calle": "Calle",    "numero": 123,    "localidad": "Localidad",    "provincia": "Provincia"  }}
+2024-06-18 22:58:04 [main] WARN  c.b.c.service.impl.PacienteService - Se ha eliminado el paciente con id 1
+2024-06-18 22:58:04 [main] INFO  c.b.c.service.impl.PacienteService - Listado de todos los pacientes: [] 
+2024-06-18 22:58:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 22:58:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 22:58:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

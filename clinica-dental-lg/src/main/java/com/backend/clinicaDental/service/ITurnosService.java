@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface ITurnosService {
     TurnoSalidaDto buscarTurno(Long id) throws ResourceNotFoundException;
     TurnoSalidaDto registrarTurno(TurnoEntradaDto turno) throws ResourceNotFoundException;

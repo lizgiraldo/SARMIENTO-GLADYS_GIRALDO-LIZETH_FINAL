@@ -1,5 +1,5 @@
 <configuration>
-    <property name="LOG_FILE" value="logs/spring-boot-application.log"/>
+    <property name="LOG_FILE" value="logs/clinicadental-LG.log"/>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_FILE}</file>

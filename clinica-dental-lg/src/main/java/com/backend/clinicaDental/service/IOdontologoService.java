@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface IOdontologoService {
 
     OdontologoSalidaDto buscarOdontologo(Long id) throws ResourceNotFoundException;

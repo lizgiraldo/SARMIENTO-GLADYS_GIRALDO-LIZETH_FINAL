@@ -10,6 +10,10 @@ public class TurnoSalidaDto {
     private Long odontologoId;
     private Long pacienteId;
 
+    public TurnoSalidaDto() {
+
+    }
+
     public TurnoSalidaDto(Long id, LocalDateTime fechaYHora, Long odontologoId, Long pacienteId) {
         this.id = id;
         this.fechaYHora = fechaYHora;

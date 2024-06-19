@@ -19,6 +19,8 @@ public class Turno {
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;
 
+    public Turno(){
+    }
     public Turno(LocalDateTime fechaYHora, Odontologo odontologo, Paciente paciente) {
         this.fechaYHora = fechaYHora;
         this.odontologo = odontologo;

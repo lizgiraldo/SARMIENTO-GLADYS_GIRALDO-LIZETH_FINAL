@@ -17,6 +17,9 @@ public class Odontologo {
     @Column(length = 50)
     private String apellido;
 
+    public Odontologo(){
+    }
+
     public Odontologo(Long id, Long numeroDeMatricula, String nombre, String apellido) {
         this.id = id;
         this.numeroDeMatricula = numeroDeMatricula;
@@ -62,6 +65,7 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
+    /*
     @Override
     public String toString() {
         return "Odontologo{" +
@@ -70,7 +74,7 @@ public class Odontologo {
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 '}';
-    }
+    }*/
 }
 
 

@@ -12,26 +12,27 @@ public class Turno {
     private LocalDateTime fechaYHora;
 
     //REVISAR
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "odontologo_id")
-    private Odontologo odontologo;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "paciente_id")
-    private Paciente paciente;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "odontologo_id", nullable = false)
+    private Odontologo odontologoid;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "paciente_id", nullable = false)
+    private Paciente pacienteid;
 
     public Turno(){
     }
-    public Turno(LocalDateTime fechaYHora, Odontologo odontologo, Paciente paciente) {
+
+    public Turno(LocalDateTime fechaYHora, Odontologo odontologoid, Paciente pacienteid) {
         this.fechaYHora = fechaYHora;
-        this.odontologo = odontologo;
-        this.paciente = paciente;
+        this.odontologoid = odontologoid;
+        this.pacienteid = pacienteid;
     }
 
-    public Turno(Long id, LocalDateTime fechaYHora, Odontologo odontologo, Paciente paciente) {
+    public Turno(Long id, LocalDateTime fechaYHora, Odontologo odontologoid, Paciente pacienteid) {
         this.id = id;
         this.fechaYHora = fechaYHora;
-        this.odontologo = odontologo;
-        this.paciente = paciente;
+        this.odontologoid = odontologoid;
+        this.pacienteid = pacienteid;
     }
 
     public Long getId() {
@@ -50,19 +51,19 @@ public class Turno {
         this.fechaYHora = fechaYHora;
     }
 
-    public Odontologo getOdontologo() {
-        return odontologo;
+    public Odontologo getOdontologoid() {
+        return odontologoid;
     }
 
-    public void setOdontologo(Odontologo odontologo) {
-        this.odontologo = odontologo;
+    public void setOdontologoid(Odontologo odontologoid) {
+        this.odontologoid = odontologoid;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Paciente getPacienteid() {
+        return pacienteid;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacienteid(Paciente pacienteid) {
+        this.pacienteid = pacienteid;
     }
 }

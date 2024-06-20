@@ -9,14 +9,10 @@ window.onload = function() {
         for (let i = 0; i < informacion.length; i++) {
             let datos = "<p> ID: " + informacion[i].id + "</p>";
             datos += "<p> Nombre: " + informacion[i].nombre + " " + informacion[i].apellido + "</p>";
-            //datos += "<p>" + informacion[i].apellido + "</p>";
             datos += "<p> DNI: " + informacion[i].dni + "</p>";
             datos += "<p> Fecha Ingreso: " + informacion[i].fechaIngreso + "</p>";
-            //datos += "<p>" + informacion[i].domicilioSalidaDto + "</p>";
-            //datos += "<p>" + informacion[i].domicilioSalidaDto[i] + "</p>";
-
             document.querySelector("ul").innerHTML += "<li>" + datos + "</li>"
-
+        
         }
 
 

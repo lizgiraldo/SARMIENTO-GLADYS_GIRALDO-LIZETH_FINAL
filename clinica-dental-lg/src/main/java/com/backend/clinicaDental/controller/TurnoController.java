@@ -1,7 +1,9 @@
 package com.backend.clinicaDental.controller;
 
 
+import com.backend.clinicaDental.dto.entrada.PacienteEntradaDto;
 import com.backend.clinicaDental.dto.entrada.TurnoEntradaDto;
+import com.backend.clinicaDental.dto.salida.PacienteSalidaDto;
 import com.backend.clinicaDental.dto.salida.TurnoSalidaDto;
 import com.backend.clinicaDental.exceptions.ResourceNotFoundException;
 import com.backend.clinicaDental.service.ITurnosService;
@@ -16,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("turnos")
+@CrossOrigin
 public class TurnoController {
 
     private ITurnosService turnoService;
@@ -26,10 +29,10 @@ public class TurnoController {
         this.turnoService = turnoService;
     }
 
-    @PostMapping("/registrar")
-    public ResponseEntity<TurnoSalidaDto> registrarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto) throws ResourceNotFoundException {
+   @PostMapping("/registrar")
+    public ResponseEntity<TurnoSalidaDto> registrarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto){
         return new ResponseEntity<>(turnoService.registrarTurno(turnoEntradaDto), HttpStatus.CREATED);
-    }
+   }
 
     @GetMapping("/listar")
     public ResponseEntity<List<TurnoSalidaDto>> listarTurnos() {

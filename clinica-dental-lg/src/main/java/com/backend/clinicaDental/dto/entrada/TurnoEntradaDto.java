@@ -11,15 +11,16 @@ public class TurnoEntradaDto {
 
     //private Long id;
     @FutureOrPresent(message = "La fecha no puede ser anterior al día de hoy")
-    @NotNull(message = "Debe especificarse la fecha de registro del Turno yyyy-MM-dd")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @NotNull(message = "Debe especificarse la fecha de registro del Turno yyyy-MM-dd HH:mm")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime fechaYHora;
 
     //Tener en cuenta que deben almacenarse por el id
     private Long odontologoId;
     private Long pacienteId;
 
-
+    public TurnoEntradaDto() {
+    }
 
     public TurnoEntradaDto(LocalDateTime fechaYHora, Long odontologoId, Long pacienteId) {
 

@@ -23,7 +23,7 @@ class OdontologoServiceTest {
 
     @Test
     @Order(1)
-    void deberiaGuardarUnOdontologo() {
+    void deberiaGuardarUnOdontologoConNumeroDeMatricula_2_yRetornarSuId() {
         OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(2L, "Gladys", "Sarmiento");
         OdontologoSalidaDto odontologoSave = odontologoService.registrarOdontologo(odontologoEntradaDto);
 
@@ -35,14 +35,14 @@ class OdontologoServiceTest {
 
     @Test
     @Order(2)
-    void deberiaBuscarUnOdontologoPorId() {
+    void deberiaBuscarUnOdontologoConId1() {
         assertDoesNotThrow(() -> odontologoService.buscarOdontologoPorId(1L));
     }
 
 
     @Test
     @Order(3)
-    void deberiaEliminarUnOdontologo() {
+    void deberiaEliminarUnOdontologoConId1() {
         assertDoesNotThrow(() -> odontologoService.eliminarOdontologo(1L));
     }
 

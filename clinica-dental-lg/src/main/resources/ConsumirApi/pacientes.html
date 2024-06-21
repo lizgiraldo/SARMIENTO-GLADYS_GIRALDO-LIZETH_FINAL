@@ -10,14 +10,20 @@
   <title>DH-ClinicaDental-LG</title>
 </head>
 
+
 <body>
   
   <header class="header">
     <!--img id="logo" src="./img/banner.jpg" alt="logo DH-ClinicaDental-LG"-->
+  <div class="header">
+    <!--img id="logo" src="./img/banner.jpg" alt="logo DH-ClinicaDental-LG"-->
     <div class="perfil">
       <h1>  DH-CLINICA DENTAL LG</h1>
-
-      <br>
+      <h2>  Listado de todos los Pacientes</h2>
+      <p class="parrafo">
+            Consumiendo la APi de la DH-ClinicaDental-LG para listar Pacientes <br>
+            http://localhost:8080/pacientes/listar
+      </p>
       <nav class="menu">
         <a class="menu_enlace" href="index.html">Inicio</a>
         <a class="menu_enlace" href="pacientes.html">Pacientes</a>
@@ -25,38 +31,33 @@
       </nav>
     </div>
 
+
   </header>
 
-  <div class="contenedor contenido-principal">
-    <main class="blog">
-      <br><br><br>
-        <h3>Mostrar Consultas</h3>
-        <br><br>
+  <div class="listado">
 
-        <article class="entrada">
-          <div class="entrada__imagen">
-            <a href="">
-                <picture>
-                    <img alt="imagen blog" src="./img/banner.jpg" alt="logo Imagen de Principal">
-                </picture>
-            </a>
-        </div>
+    <div class="contenedor contenido-principal">
+      <main class="blog">
+          <h3>PACIENTES</h3>
+  
+          <article class="entrada">
+              <div class="entrada__imagen">
+                  <a href="">
+                      <picture>
+                          <img alt="imagen blog" src="./img/banner2.jpg" alt="logo Imagen de Paciente">
+                      </picture>
+                  </a>
+              </div>
+  
+          </article>
+  
+  
+  </div>
 
-            <div class="entrada-contenido">
-              <br><br>
-                <h4 class="no-margin">Información</h4>
-                <br>
-                <p>Este programa fue desarrollado para consumir las APIS de nuestra Clinica Dental
-                  que fue desarrollado para BackEnd en Digital House.
-                  A través del menú podremos ver el consumo de las APIS de listar y podremos ver 
-                  los listado de Pacientes y Odontologos de nuestra Clinica Dental</p>
-
-            </div>
-        </article>
-
-
-</div>
-
+    <ul class="covers">
+      <!-- listado de los Pacientes  -->     
+    </ul>
+  </div>
   
 
     <!-- banner -->
@@ -71,5 +72,6 @@
   </footer>
 
 </body>
+<script src="./pacientes.js"></script>
 
 </html>

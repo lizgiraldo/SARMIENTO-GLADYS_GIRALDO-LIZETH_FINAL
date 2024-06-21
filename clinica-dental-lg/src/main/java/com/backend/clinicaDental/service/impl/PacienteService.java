@@ -54,7 +54,7 @@ public class PacienteService implements IPacienteService {
 
         if (pacienteBuscado != null) {
             pacienteEncontrado = modelMapper.map(pacienteBuscado, PacienteSalidaDto.class);
-            LOGGER.info("PacienteEncontrado: {}", JsonPrinter.toString(pacienteEncontrado));
+            LOGGER.info("Paciente Encontrado: {}", JsonPrinter.toString(pacienteEncontrado));
         } else LOGGER.error("No se ha encontrado el paciente con id {}", id);
 
         return pacienteEncontrado;
@@ -66,7 +66,7 @@ public class PacienteService implements IPacienteService {
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
         } else {
-            throw new ResourceNotFoundException("No Existe Regostro del Paciente con id " + id);
+            throw new ResourceNotFoundException("No Existe Registro del Paciente con id " + id);
         }
 
     }

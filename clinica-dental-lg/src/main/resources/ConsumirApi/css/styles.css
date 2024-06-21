@@ -30,13 +30,20 @@ body {
 
 }
 
+.contenedor {
+    width: min(50%, 120rem);
+    margin: 0 auto;
+}
+
+.contenido-principal {
+    gap: 5rem;
+}
+
 header {
     background: linear-gradient(var(--gris), var(--gris-2));
     padding: 3rem;
     border-left: .5rem solid var(--verde);
 }
-
-/**Header**/
 
 .header {
     background-image: url(../img/banner3.jpeg);
@@ -56,9 +63,24 @@ h1, h2{
     color:indigo;
 }
 
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu_enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primario);
+}
+
+
 .parrafo{
     color: #3b3636;
 }
+
 .barra {
     padding-top: 1rem;
 }
@@ -82,8 +104,6 @@ h1, h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
-
 }
 
 
@@ -104,6 +124,7 @@ h1, h2{
     list-style: none;
     padding-left: 80px;
 }
+
 .covers button{
     background-color: transparent;
     border: none;

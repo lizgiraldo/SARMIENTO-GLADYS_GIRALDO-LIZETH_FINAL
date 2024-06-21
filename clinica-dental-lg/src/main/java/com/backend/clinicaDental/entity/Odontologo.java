@@ -65,16 +65,6 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    /*
-    @Override
-    public String toString() {
-        return "Odontologo{" +
-                "id=" + id +
-                ", numeroDeMatricula=" + numeroDeMatricula +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                '}';
-    }*/
 }
 
 

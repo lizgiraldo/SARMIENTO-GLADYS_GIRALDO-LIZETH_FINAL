@@ -67,7 +67,7 @@ class TurnoServiceTest {
 
     @Test
     @Order(3)
-    void deberiaGuardarUnTurno() {
+    void deberiaGuardarUnTurnoYDevolverSuId() {
         TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(LocalDateTime.now(), odontologoId, pacienteId);
         assertDoesNotThrow(()->{
             TurnoSalidaDto turnoSave = turnosService.registrarTurno(turnoEntradaDto);
@@ -78,7 +78,7 @@ class TurnoServiceTest {
 
     @Test
     @Order(4)
-    void deberiaBuscarUnTurno() {
+    void deberiaBuscarUnTurnoConId1() {
         assertDoesNotThrow(() -> turnosService.buscarTurnoPorId(1L));
     }
 

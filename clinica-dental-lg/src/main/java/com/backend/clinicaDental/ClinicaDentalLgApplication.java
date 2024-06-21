@@ -1,7 +1,5 @@
 package com.backend.clinicaDental;
 
-
-
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.slf4j.Logger;
@@ -19,21 +17,13 @@ public class ClinicaDentalLgApplication {
 		LOGGER.info("INICIANDO ARCHIVO LOG ");
 		SpringApplication.run(ClinicaDentalLgApplication.class, args);
 
-
 	}
-
-	//@Bean
-	//public ModelMapper modelMapper() {
-	//	return new ModelMapper();
-	//}
 
 	@Bean
 	public ModelMapper modelMapper() {
-		ModelMapper modelMapper = new ModelMapper();
-		modelMapper.getConfiguration()
-				.setMatchingStrategy(MatchingStrategies.STRICT);
-		return modelMapper;
+		return new ModelMapper();
 	}
+
 
 
 }

@@ -14,25 +14,25 @@ public class Turno {
     //REVISAR
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "odontologo_id", nullable = false)
-    private Odontologo odontologoid;
+    private Odontologo odontologo;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "paciente_id", nullable = false)
-    private Paciente pacienteid;
+    private Paciente paciente;
 
-    public Turno(){
+    public Turno() {
     }
 
-    public Turno(LocalDateTime fechaYHora, Odontologo odontologoid, Paciente pacienteid) {
+    public Turno(LocalDateTime fechaYHora, Odontologo odontologo, Paciente paciente) {
         this.fechaYHora = fechaYHora;
-        this.odontologoid = odontologoid;
-        this.pacienteid = pacienteid;
+        this.odontologo = odontologo;
+        this.paciente = paciente;
     }
 
-    public Turno(Long id, LocalDateTime fechaYHora, Odontologo odontologoid, Paciente pacienteid) {
+    public Turno(Long id, LocalDateTime fechaYHora, Odontologo odontologo, Paciente paciente) {
         this.id = id;
         this.fechaYHora = fechaYHora;
-        this.odontologoid = odontologoid;
-        this.pacienteid = pacienteid;
+        this.odontologo = odontologo;
+        this.paciente = paciente;
     }
 
     public Long getId() {
@@ -52,18 +52,18 @@ public class Turno {
     }
 
     public Odontologo getOdontologoid() {
-        return odontologoid;
+        return odontologo;
     }
 
     public void setOdontologoid(Odontologo odontologoid) {
-        this.odontologoid = odontologoid;
+        this.odontologo = odontologoid;
     }
 
     public Paciente getPacienteid() {
-        return pacienteid;
+        return paciente;
     }
 
     public void setPacienteid(Paciente pacienteid) {
-        this.pacienteid = pacienteid;
+        this.paciente = pacienteid;
     }
 }

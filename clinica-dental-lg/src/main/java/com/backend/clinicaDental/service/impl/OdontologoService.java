@@ -28,23 +28,12 @@ public class OdontologoService implements IOdontologoService {
 
     }
 
-    /*
     @Override
-    public OdontologoSalidaDto buscarOdontologo(Long id) throws ResourceNotFoundException {
-        Odontologo odontologo = odontologoRepository.findById(id).orElseThrow(null);
-        if(odontologo == null){
-            throw new ResourceNotFoundException("No se encuentra el odontologo con el id " + id);
-        }
-        LOGGER.info("Odontologo encontrado satisfactoriamente" + JsonPrinter.toString(odontologo));
-        return modelMapper.map(odontologo, OdontologoSalidaDto.class);
-    }
-*/
-    @Override
-    public OdontologoSalidaDto buscarOdontologoPorId(Long id) throws ResourceNotFoundException{
+    public OdontologoSalidaDto buscarOdontologoPorId(Long id) throws ResourceNotFoundException {
         Odontologo odontologoBuscado = odontologoRepository.findById(id).orElse(null);
         OdontologoSalidaDto odontologoEncontrado = null;
 
-        if(odontologoBuscado != null){
+        if (odontologoBuscado != null) {
             odontologoEncontrado = modelMapper.map(odontologoBuscado, OdontologoSalidaDto.class);
             LOGGER.info("Odontologo Encontrado: {}", JsonPrinter.toString(odontologoEncontrado));
         } else LOGGER.error("No se ha encontrado el odontologo con id {}", id);
@@ -62,19 +51,19 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public List<OdontologoSalidaDto> listarOdontologos(){
-    List<OdontologoSalidaDto> odontologos = odontologoRepository.findAll()
-            .stream()
-            .map(odontologo -> modelMapper.map(odontologo, OdontologoSalidaDto.class))
-            .toList();
-    LOGGER.info("Estos son los odontologos encontrados" + JsonPrinter.toString(odontologos));
+    public List<OdontologoSalidaDto> listarOdontologos() {
+        List<OdontologoSalidaDto> odontologos = odontologoRepository.findAll()
+                .stream()
+                .map(odontologo -> modelMapper.map(odontologo, OdontologoSalidaDto.class))
+                .toList();
+        LOGGER.info("Estos son los odontologos encontrados" + JsonPrinter.toString(odontologos));
         return odontologos;
     }
 
     @Override
-    public OdontologoSalidaDto actualizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException{
+    public OdontologoSalidaDto actualizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException {
         Odontologo odontologoExistente = odontologoRepository.findById(id).orElse(null);
-        if(odontologoExistente == null){
+        if (odontologoExistente == null) {
             throw new ResourceNotFoundException("Odontologo no encontrado con id" + id);
         }
 
@@ -90,7 +79,7 @@ public class OdontologoService implements IOdontologoService {
 
     @Override
     public void eliminarOdontologo(Long id) throws ResourceNotFoundException {
-        if(odontologoRepository.existsById(id)){
+        if (odontologoRepository.existsById(id)) {
             odontologoRepository.deleteById(id);
         } else {
             LOGGER.warn("Odontologo no encontrado con id " + id);

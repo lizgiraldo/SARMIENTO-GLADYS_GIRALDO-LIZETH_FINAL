@@ -7,14 +7,14 @@ public class TurnoSalidaDto {
     private Long id;
     private LocalDateTime fechaYHora;
     //Tener en cuenta que deben almacenarse por el id
-    private Long odontologoId;
-    private Long pacienteId;
+    private OdontologoSalidaDto odontologoId;
+    private PacienteSalidaDto pacienteId;
 
     public TurnoSalidaDto() {
 
     }
 
-    public TurnoSalidaDto(Long id, LocalDateTime fechaYHora, Long odontologoId, Long pacienteId) {
+    public TurnoSalidaDto(Long id, LocalDateTime fechaYHora, OdontologoSalidaDto odontologoId, PacienteSalidaDto pacienteId) {
         this.id = id;
         this.fechaYHora = fechaYHora;
         this.odontologoId = odontologoId;
@@ -37,19 +37,20 @@ public class TurnoSalidaDto {
         this.fechaYHora = fechaYHora;
     }
 
-    public Long getOdontologoId() {
+    public OdontologoSalidaDto getOdontologoId() {
         return odontologoId;
     }
 
-    public void setOdontologoId(Long odontologoId) {
+    public void setOdontologoId(OdontologoSalidaDto odontologoId) {
         this.odontologoId = odontologoId;
     }
 
-    public Long getPacienteId() {
+    public PacienteSalidaDto getPacienteId() {
         return pacienteId;
     }
 
-    public void setPacienteId(Long pacienteId) {
+    public void setPacienteId(PacienteSalidaDto pacienteId) {
         this.pacienteId = pacienteId;
     }
+
 }

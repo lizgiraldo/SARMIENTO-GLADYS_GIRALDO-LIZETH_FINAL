@@ -28,7 +28,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public PacienteSalidaDto registrarPaciente(PacienteEntradaDto pacienteEntradaDto){
+    public PacienteSalidaDto registrarPaciente(PacienteEntradaDto pacienteEntradaDto) {
         LOGGER.info("PacienteEntradaDto: " + JsonPrinter.toString(pacienteEntradaDto));
         Paciente paciente = modelMapper.map(pacienteEntradaDto, Paciente.class);
         LOGGER.info("PacienteEntidad: " + JsonPrinter.toString(paciente));
@@ -48,11 +48,11 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException{
+    public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException {
         Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteEncontrado = null;
 
-        if(pacienteBuscado != null){
+        if (pacienteBuscado != null) {
             pacienteEncontrado = modelMapper.map(pacienteBuscado, PacienteSalidaDto.class);
             LOGGER.info("PacienteEncontrado: {}", JsonPrinter.toString(pacienteEncontrado));
         } else LOGGER.error("No se ha encontrado el paciente con id {}", id);
@@ -62,7 +62,7 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public void eliminarPaciente(Long id) throws ResourceNotFoundException {
-        if(buscarPacientePorId(id) != null){
+        if (buscarPacientePorId(id) != null) {
             pacienteRepository.deleteById(id);
             LOGGER.warn("Se ha eliminado el paciente con id {}", id);
         } else {
@@ -79,7 +79,7 @@ public class PacienteService implements IPacienteService {
         Paciente pacienteActualizar = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteSalidaDto = null;
 
-        if(pacienteActualizar != null){
+        if (pacienteActualizar != null) {
 
             pacienteRecibido.setId(pacienteActualizar.getId());
             pacienteRecibido.getDomicilio().setId(pacienteActualizar.getDomicilio().getId());
@@ -97,7 +97,6 @@ public class PacienteService implements IPacienteService {
     }
 
 
-
     private void configureMapping() {
 
         modelMapper.typeMap(PacienteEntradaDto.class, Paciente.class)
@@ -105,7 +104,6 @@ public class PacienteService implements IPacienteService {
         modelMapper.typeMap(Paciente.class, PacienteSalidaDto.class)
                 .addMappings(mapper -> mapper.map(Paciente::getDomicilio, PacienteSalidaDto::setDomicilioSalidaDto));
     }
-
 
 
 }

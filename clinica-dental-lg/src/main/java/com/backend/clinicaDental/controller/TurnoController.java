@@ -1,9 +1,8 @@
 package com.backend.clinicaDental.controller;
 
 
-import com.backend.clinicaDental.dto.entrada.PacienteEntradaDto;
 import com.backend.clinicaDental.dto.entrada.TurnoEntradaDto;
-import com.backend.clinicaDental.dto.salida.PacienteSalidaDto;
+
 import com.backend.clinicaDental.dto.salida.TurnoSalidaDto;
 import com.backend.clinicaDental.exceptions.ResourceNotFoundException;
 import com.backend.clinicaDental.service.ITurnosService;
@@ -29,10 +28,10 @@ public class TurnoController {
         this.turnoService = turnoService;
     }
 
-   @PostMapping("/registrar")
-    public ResponseEntity<TurnoSalidaDto> registrarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto){
-        return new ResponseEntity<>(turnoService.registrarTurno(turnoEntradaDto), HttpStatus.CREATED);
-   }
+    @PostMapping("/registrar")
+    public TurnoSalidaDto guardarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto) {
+        return turnoService.registrarTurno(turnoEntradaDto);
+    }
 
     @GetMapping("/listar")
     public ResponseEntity<List<TurnoSalidaDto>> listarTurnos() {
@@ -40,13 +39,13 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TurnoSalidaDto> buscarTurno(@PathVariable Long id){
+    public ResponseEntity<TurnoSalidaDto> buscarTurno(@PathVariable Long id) throws ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.buscarTurnoPorId(id), HttpStatus.OK);
     }
 
 
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<TurnoSalidaDto> actualizarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto, @PathVariable Long id) throws ResourceNotFoundException  {
+    public ResponseEntity<TurnoSalidaDto> actualizarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto, @PathVariable Long id) throws ResourceNotFoundException {
         return new ResponseEntity<>(turnoService.actualizarTurno(id, turnoEntradaDto), HttpStatus.OK);
     }
 

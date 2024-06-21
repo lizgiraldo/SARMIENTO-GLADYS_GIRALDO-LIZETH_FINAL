@@ -39,7 +39,7 @@ public class OdontologoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<OdontologoSalidaDto> buscarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
-        return new ResponseEntity<>(odontologoService.buscarOdontologo(id), HttpStatus.OK);
+        return new ResponseEntity<>(odontologoService.buscarOdontologoPorId(id), HttpStatus.OK);
     }
 
     @PutMapping("/actualizar/{id}")

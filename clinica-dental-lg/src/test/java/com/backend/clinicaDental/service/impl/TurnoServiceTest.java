@@ -55,7 +55,7 @@ class TurnoServiceTest {
     @Test
     @Order(2)
     void deberiaBuscarUnTurno() {
-        assertDoesNotThrow(() -> turnosService.buscarTurno(1L));
+        assertDoesNotThrow(() -> turnosService.buscarTurnoPorId(1L));
     }
 
     @Test

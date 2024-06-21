@@ -2,7 +2,9 @@ package com.backend.clinicaDental.service.impl;
 
 import com.backend.clinicaDental.dto.entrada.OdontologoEntradaDto;
 import com.backend.clinicaDental.dto.salida.OdontologoSalidaDto;
+import com.backend.clinicaDental.dto.salida.PacienteSalidaDto;
 import com.backend.clinicaDental.entity.Odontologo;
+import com.backend.clinicaDental.entity.Paciente;
 import com.backend.clinicaDental.exceptions.ResourceNotFoundException;
 import com.backend.clinicaDental.repository.OdontologoRepository;
 import com.backend.clinicaDental.service.IOdontologoService;
@@ -26,6 +28,7 @@ public class OdontologoService implements IOdontologoService {
 
     }
 
+    /*
     @Override
     public OdontologoSalidaDto buscarOdontologo(Long id) throws ResourceNotFoundException {
         Odontologo odontologo = odontologoRepository.findById(id).orElseThrow(null);
@@ -35,6 +38,20 @@ public class OdontologoService implements IOdontologoService {
         LOGGER.info("Odontologo encontrado satisfactoriamente" + JsonPrinter.toString(odontologo));
         return modelMapper.map(odontologo, OdontologoSalidaDto.class);
     }
+*/
+    @Override
+    public OdontologoSalidaDto buscarOdontologoPorId(Long id) throws ResourceNotFoundException{
+        Odontologo odontologoBuscado = odontologoRepository.findById(id).orElse(null);
+        OdontologoSalidaDto odontologoEncontrado = null;
+
+        if(odontologoBuscado != null){
+            odontologoEncontrado = modelMapper.map(odontologoBuscado, OdontologoSalidaDto.class);
+            LOGGER.info("Odontologo Encontrado: {}", JsonPrinter.toString(odontologoEncontrado));
+        } else LOGGER.error("No se ha encontrado el odontologo con id {}", id);
+
+        return odontologoEncontrado;
+    }
+
 
     @Override
     public OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologoEntradaDto) {

@@ -38,7 +38,7 @@ private IOdontologoService odontologoService;
 @Test
     @Order(2)
     void deberiaBuscarUnOdontologoPorId() {
-    assertDoesNotThrow(() -> odontologoService.buscarOdontologo(1L));
+    assertDoesNotThrow(() -> odontologoService.buscarOdontologoPorId(1L));
 }
 
 

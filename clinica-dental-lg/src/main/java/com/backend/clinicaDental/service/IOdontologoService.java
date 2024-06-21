@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface IOdontologoService {
 
-    OdontologoSalidaDto buscarOdontologo(Long id) throws ResourceNotFoundException;
+    OdontologoSalidaDto buscarOdontologoPorId(Long id) throws ResourceNotFoundException;
     OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologoEntradaDto);
     List<OdontologoSalidaDto> listarOdontologos();
     OdontologoSalidaDto actualizarOdontologo(Long id, OdontologoEntradaDto odontologoEntradaDto) throws ResourceNotFoundException;

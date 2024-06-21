@@ -48,7 +48,7 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public PacienteSalidaDto buscarPacientePorId(Long id){
+    public PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException{
         Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteEncontrado = null;
 

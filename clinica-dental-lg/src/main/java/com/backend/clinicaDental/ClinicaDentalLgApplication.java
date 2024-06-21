@@ -3,6 +3,7 @@ package com.backend.clinicaDental;
 
 
 import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -21,9 +22,18 @@ public class ClinicaDentalLgApplication {
 
 	}
 
+	//@Bean
+	//public ModelMapper modelMapper() {
+	//	return new ModelMapper();
+	//}
+
 	@Bean
 	public ModelMapper modelMapper() {
-		return new ModelMapper();
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration()
+				.setMatchingStrategy(MatchingStrategies.STRICT);
+		return modelMapper;
 	}
+
 
 }

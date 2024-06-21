@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface ITurnosService {
-    TurnoSalidaDto buscarTurno(Long id) throws ResourceNotFoundException;
+    TurnoSalidaDto buscarTurnoPorId(Long id);
     TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto);
     List<TurnoSalidaDto> listarTurnos();
     TurnoSalidaDto actualizarTurno(Long id, TurnoEntradaDto turnoEntradaDto);

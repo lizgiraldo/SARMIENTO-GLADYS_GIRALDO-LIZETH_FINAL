@@ -40,9 +40,10 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TurnoSalidaDto> buscarTurno(@PathVariable Long id) throws ResourceNotFoundException {
-        return new ResponseEntity<>(turnoService.buscarTurno(id), HttpStatus.OK);
+    public ResponseEntity<TurnoSalidaDto> buscarTurno(@PathVariable Long id){
+        return new ResponseEntity<>(turnoService.buscarTurnoPorId(id), HttpStatus.OK);
     }
+
 
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<TurnoSalidaDto> actualizarTurno(@RequestBody @Valid TurnoEntradaDto turnoEntradaDto, @PathVariable Long id) throws ResourceNotFoundException  {
@@ -51,9 +52,10 @@ public class TurnoController {
 
 
     @DeleteMapping("/eliminar")
-    public ResponseEntity<String> eliminarTurno(@RequestBody Long id) throws ResourceNotFoundException {
+    public ResponseEntity<?> eliminarTurno(@RequestBody Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
         return new ResponseEntity<>("Turno eliminado", HttpStatus.NO_CONTENT);
     }
+
 
 }
